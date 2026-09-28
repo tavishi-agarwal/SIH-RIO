@@ -6,7 +6,7 @@ RIO is composed of several logical layers that work together to transform input 
 
 ## 2. High-Level Architecture
 
-.
+```text
                  ┌─────────────────────┐
                  │      User / Judge   │
                  └──────────┬──────────┘
@@ -26,15 +26,15 @@ RIO is composed of several logical layers that work together to transform input 
              ┌──────────────┴──────────────┐
              │                             │
              ▼                             ▼
-   ┌──────────────────┐          ┌──────────────────┐
-   │  Input / Geo Data │          │     DELFT3D     │
+   ┌──────────────────┐           ┌──────────────────┐
+   │  Input / Geo Data │          |    DELFT3D       │
    │ Terrain / Flow    │─────────▶│ Hydraulic Model  │
-   └──────────────────┘          └────────┬─────────┘
+   └──────────────────┘           └────────┬─────────┘
                                           │
                                           ▼
                                 ┌──────────────────┐
-                                │ Hydraulic Results
-                                (kml and sph files)│
+                                │ Hydraulic Results |
+                                │ (KML and SPH files| 
                                 │ Depth / Velocity │
                                 │ Water Surface    │
                                 └────────┬─────────┘
