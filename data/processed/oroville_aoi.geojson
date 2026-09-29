@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oroville_FeatherRiver_AOI"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -121.85,
+              39.05
+            ],
+            [
+              -121.35,
+              39.05
+            ],
+            [
+              -121.35,
+              39.65
+            ],
+            [
+              -121.85,
+              39.65
+            ],
+            [
+              -121.85,
+              39.05
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
