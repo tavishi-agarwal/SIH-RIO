@@ -1,0 +1,28 @@
+# Build context for the backend image is the repository ROOT
+# (docker build -f backend/Dockerfile .). Keep it small.
+
+.git
+.gitignore
+.github
+
+**/node_modules
+**/.next
+**/__pycache__
+**/*.py[cod]
+**/*.log
+
+# Not needed inside the backend image
+frontend
+data
+model
+docs
+scripts
+README.md
+SETUP.md
+
+# Backend runtime data
+backend/storage
+backend/demo
+
+# Large media
+recordings

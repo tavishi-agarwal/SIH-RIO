@@ -1,0 +1,43 @@
+# ─── Dependencies ────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ─── Build output ────────────────────────────────────────────────────────────
+.next/
+out/
+build/
+*.tsbuildinfo
+
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ─── Environment ─────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# ─── Backend runtime data (regenerated from resources/) ──────────────────────
+backend/storage/
+backend/demo/
+
+# ─── Simulation recordings (large; streamed by the backend) ──────────────────
+# To publish them, track with Git LFS: git lfs track "recordings/*.mp4"
+recordings/
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# ─── Editor / OS ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

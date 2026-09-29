@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 47.4% 11.2%;
+  --primary: 24.6 95% 53.1%;
+  --primary-foreground: 0 0% 100%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --border: 30 60% 88%;
+  --ring: 24.6 95% 53.1%;
+}
+
+@layer base {
+  * { @apply border-orange-200; }
+  body { @apply bg-white text-slate-700 antialiased; }
+}
+
+@layer components {
+  .map-container { @apply w-full h-full; }
+}
+
+/* maplibre-gl CSS */
+@import 'maplibre-gl/dist/maplibre-gl.css';

@@ -1,0 +1,34 @@
+# Runtime dependency set. Everything the app actually imports.
+# Kept deliberately lean: free hosts give you 0.1 vCPU, so a smaller
+# requirements file means a much faster image build.
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+pydantic==2.7.1
+pydantic-settings==2.2.1
+python-multipart==0.0.9
+aiofiles==23.2.1
+httpx==0.27.0
+python-dotenv==1.0.1
+loguru==0.7.2
+numpy==1.26.4
+
+# GeoTIFF parsing (real HEC-RAS pipeline). The manylinux wheel bundles GDAL,
+# so no apt/libgdal step is required.
+rasterio==1.3.10
+# PNG encoding for the colour-mapped flood layers — required by
+# app/services/flood/raster_pipeline.py (_write_png).
+pillow==10.3.0
+
+# ---------------------------------------------------------------------------
+# Not imported by any module today. Uncomment if you start using them —
+# together they add ~150 MB and several minutes to a 0.1 vCPU build.
+# ---------------------------------------------------------------------------
+# pandas==2.2.2
+# scipy==1.13.0
+# shapely==2.0.4
+# pyproj==3.6.1
+# sqlalchemy==2.0.30
+# alembic==1.13.1
+# psycopg2-binary==2.9.9
+# celery==5.4.0
+# redis==5.0.4
